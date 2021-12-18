@@ -6,6 +6,7 @@
         function loadDoc() {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
+            console.log(this.responseText);
             document.querySelector(".demo").innerHTML = this.responseText;
         }
         xhttp.open("GET", "https://anarabdullazada.github.io/test_git_backend/ajax_info.txt");
