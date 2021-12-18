@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <body>
+    <body id="demo">
         <form method="post" action="https://github.com/AnarAbdullazada/test_git_backend/blob/main/ajax_info.txt">
             <button class="btn-octicon tooltipped tooltipped-nw" type="submit" aria-label="Edit this file" data-hotkey="e" data-disable-with>
                 <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-pencil">
@@ -13,9 +13,10 @@
         function loadDoc() {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
-            document.getElementById("demo").innerHTML = this.responseText;
-            }
-        xhttp.open("GET", "https://anarabdullazada.github.io/test_git_backend/ajax_info.txt", true);
+            document.getElementById("demo").innerHTML =
+            this.responseText;
+        }
+        xhttp.open("GET", "https://github.com/AnarAbdullazada/test_git_backend/blob/main/ajax_info.txt");
         xhttp.send();
         }
         loadDoc();
